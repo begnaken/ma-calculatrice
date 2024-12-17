@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma calculatrice</title>
+    <script>
+        
+    {/* <script type="calculatrice"> */}
+// Fonction pour additionner deux nombres
+function addition(a, b) {
+    return a + b;
+}
+
+// Fonction pour soustraire deux nombres
+function soustraction(a, b) {
+    return a - b;
+}
+
+// Fonction pour multiplier deux nombres
+function multiplication(a, b) {
+    return a * b;
+}
+
+// Fonction pour diviser deux nombres
+function division(a, b) {
+    if (b === 0) {
+        alert("Erreur : Division par zéro impossible.");
+        return null;
+    }
+    return a / b;
+}
+
+// Fonction pour obtenir le reste de la division de deux nombres
+function modulo(a, b) {
+    if (b === 0) {
+        alert("Erreur : Division par zéro impossible.");
+        return null;
+    }
+    return a % b;
+}
+
+// Fonction principale pour choisir l'opération et saisir les nombres
+function calculer() {
+    var operation = prompt("Choisissez une opération : addition, soustraction, multiplication, division, modulo");
+
+    var nombre1 = parseFloat(prompt("Entrez le premier nombre :"));
+    var nombre2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+
+    var resultat;
+
+    switch (operation) {
+        case "addition":
+            resultat = addition(nombre1, nombre2);
+            break;
+        case "soustraction":
+            resultat = soustraction(nombre1, nombre2);
+            break;
+        case "multiplication":
+            resultat = multiplication(nombre1, nombre2);
+            break;
+        case "division":
+            resultat = division(nombre1, nombre2);
+            break;
+        case "modulo":
+            resultat = modulo(nombre1, nombre2);
+            break;
+        default:
+            alert("Erreur : Opération inconnue.");
+            return;
+    }
+
+    if (resultat !== null) {
+        alert("Le résultat de l'opération " + operation + " est : " + resultat);
+    }
+}
+
+// Appel de la fonction principale pour démarrer le calcul
+calculer();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
